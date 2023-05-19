@@ -71,6 +71,8 @@ export async function memoriesRoutes(app: FastifyInstance) {
 
     const { content, coverUrl, isPublic } = bodySchema.parse(request.body)
 
+    console.log(request.body)
+
     const memory = await prisma.memory.update({
       where: {
         id,
